@@ -1,1 +1,191 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amazing Animals | Kids Learning Hub</title>
+<meta name="description" content="Explore amazing animals, play fun quizzes and discover the animal world!">
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#fffaf0;
+ color:#35434a;
+}
+header{
+ background:#77c9a5;
+ padding:20px;
+ text-align:center;
+ color:#fff;
+}
+header h1{font-size:32px;margin:5px}
+nav{
+ background:#fff;
+ padding:15px;
+ text-align:center;
+ position:sticky;
+ top:0;
+}
+nav a{
+ color:#277b61;
+ text-decoration:none;
+ margin:8px;
+ font-weight:bold;
+}
+.hero{
+ text-align:center;
+ padding:45px 18px;
+ background:#fff0c9;
+}
+.hero h2{font-size:32px;color:#397b61}
+.hero p{font-size:18px}
+section{
+ padding:30px 18px;
+ text-align:center;
+}
+.cards{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+ gap:15px;
+ max-width:850px;
+ margin:auto;
+}
+.card{
+ background:#fff;
+ border-radius:18px;
+ padding:20px 12px;
+ box-shadow:0 3px 10px #00000010;
+}
+.animal{font-size:55px}
+.card h3{color:#39866b}
+button{
+ background:#54ae86;
+ color:white;
+ border:0;
+ padding:13px 20px;
+ border-radius:12px;
+ font-size:16px;
+ cursor:pointer;
+ margin:8px;
+}
+#answer{font-weight:bold;min-height:28px}
+footer{
+ background:#77c9a5;
+ text-align:center;
+ color:white;
+ padding:25px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🐾 Amazing Animals 🐾</h1>
+<p>Play • Learn • Colour • Discover</p>
+</header>
+
+<nav>
+<a href="#animals">Animals</a>
+<a href="#facts">Learn</a>
+<a href="#quiz">Quiz</a>
+<a href="#colour">Colouring</a>
+</nav>
+
+<div class="hero">
+<h2>Welcome to Amazing Animals!</h2>
+<p>Discover wonderful animals from all around the world.</p>
+<p>Learn something new every day!</p>
+<a href="#animals"><button>Explore Animals 🐘</button></a>
+</div>
+
+<section id="animals">
+<h2>🌍 Meet Our Amazing Animals</h2>
+<div class="cards">
+<div class="card">
+<div class="animal">🦁</div>
+<h3>Lion</h3>
+<p>The king of the jungle!</p>
+</div>
+<div class="card">
+<div class="animal">🐘</div>
+<h3>Elephant</h3>
+<p>A giant with a long trunk.</p>
+</div>
+<div class="card">
+<div class="animal">🦒</div>
+<h3>Giraffe</h3>
+<p>The tallest land animal.</p>
+</div>
+<div class="card">
+<div class="animal">🐼</div>
+<h3>Panda</h3>
+<p>A bear that loves bamboo.</p>
+</div>
+<div class="card">
+<div class="animal">🐬</div>
+<h3>Dolphin</h3>
+<p>A clever ocean swimmer.</p>
+</div>
+<div class="card">
+<div class="animal">🐧</div>
+<h3>Penguin</h3>
+<p>A bird that loves swimming.</p>
+</div>
+</div>
+</section>
+
+<section id="facts" style="background:#e5f5ec">
+<h2>📚 Animal Fun Facts</h2>
+<div class="cards">
+<div class="card">
+<h3>Elephants</h3>
+<p>Elephants use their trunks to smell, drink and pick things up.</p>
+</div>
+<div class="card">
+<h3>Giraffes</h3>
+<p>Giraffes have very long necks to help them reach tall trees.</p>
+</div>
+<div class="card">
+<h3>Dolphins</h3>
+<p>Dolphins use sounds to communicate with each other.</p>
+</div>
+</div>
+</section>
+
+<section id="quiz">
+<h2>🧠 Animal Quiz Time!</h2>
+<p>Which animal has a very long neck?</p>
+<button onclick="check('Lion')">Lion</button>
+<button onclick="check('Giraffe')">Giraffe</button>
+<button onclick="check('Panda')">Panda</button>
+<p id="answer" aria-live="polite"></p>
+</section>
+
+<section id="colour" style="background:#fff0c9">
+<h2>🎨 Colouring Corner</h2>
+<p>Get ready for fun animal colouring adventures!</p>
+<p>Our printable animal colouring pages are coming soon.</p>
+</section>
+
+<footer>
+<h2>🐾 Amazing Animals</h2>
+<p>Making learning fun, one animal at a time!</p>
+<p>© 2026 Amazing Animals</p>
+</footer>
+
+<script>
+function check(answer){
+ const result=document.getElementById("answer");
+ if(answer==="Giraffe"){
+  result.textContent="🌟 Fantastic! You got it right!";
+ }else{
+  result.textContent="😊 Good try! Have another go!";
+ }
+}
+</script>
+
+</body>
+</html>
